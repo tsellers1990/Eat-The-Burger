@@ -7,3 +7,5 @@ CREATE TABLE burgers(
     name varchar(100) NOT NULL,
     isEaten BOOLEAN DEFAULT false
 );
+
+select * from burgers;
