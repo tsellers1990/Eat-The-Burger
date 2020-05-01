@@ -22,6 +22,7 @@ function objToSql(ob) { ////ask Leo to explain this whole function please
             arr.push(key + "=" + value);
         }
     }
+    return arr.toString();
 }
 
 var orm = {
