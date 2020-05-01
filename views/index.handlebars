@@ -3,9 +3,9 @@
 <h2>Available Burgers</h2>
 
 <ul>
-    {{#each burgers}}
-        {{#unless isEaten}}
-            {{>burgers/burger-block eaten=true}}
+    {{#each burger_data}}
+        {{#unless this.devoured}}
+            {{>burgers/burgers-block eaten=true}}
         {{/unless}}
     {{/each}}
 </ul>
@@ -13,9 +13,10 @@
 <h2>Eaten Burgers</h2>
 
 <ul>
-    {{#each burger}}
-        {{#if}}
-            {{>burgers/burger-block eaten=false}}
+    {{#each burger_data}}
+        {{#if this.devoured}}
+        {{!-- /partials/burgers/burger-block --}}
+            {{>burgers/burgers-block eaten=false}}
         {{/if}}
     {{/each}}
 </ul>
